@@ -2,22 +2,20 @@
 $(function () {
     console.log('list.js');
     
-    var $errorTable = $('#errorTable').hide();
-    console.log($errorTable);
+    var $todoTable = $('#todoTable').hide();
+    console.log($todoTable);
     
     var statusClasses = {
-        'Új': 'danger',
-        'assigned': 'info',
+        'new': 'danger',
         'ready': 'success',
         'rejected': 'default',
-        'pending': 'warning',
     };
 
     var types = Object.keys(statusClasses);
     
     var rows = {};
     types.forEach(function (type) {
-        var $trs = $errorTable.find('tbody tr .label-'+statusClasses[type]).closest('tr');
+        var $trs = $todoTable.find('tbody tr .label-'+ statusClasses[type]).closest('tr');
         rows[type] = $trs;
     });
     console.log(rows);
@@ -61,7 +59,7 @@ $(function () {
     $div.append($ul);
     $div.append($tabContent);
     
-    $errorTable.before($div);
+    $todoTable.before($div);
     
 });
 

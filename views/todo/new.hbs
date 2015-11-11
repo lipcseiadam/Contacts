@@ -10,15 +10,15 @@
 <form class="form-horizontal" method="post">
     <fieldset>
         <div class="form-group
-            {{#if validationErrors.helyszin}}
+            {{#if validationErrors.feladat}}
                 has-error
             {{/if}}
         ">
-            <label for="helyszin" class="col-lg-2 control-label">Név</label>
+            <label for="feladat" class="col-lg-2 control-label">Feladat</label>
             <div class="col-lg-10">
-                <input class="form-control" id="helyszin" name="helyszin" placeholder="pl. mosdó, folyosó" type="text" value="{{data.helyszin}}">
-                {{#if validationErrors.helyszin}}
-                    <span class="help-block">{{validationErrors.helyszin.msg}}</span>
+                <input class="form-control" id="feladat" name="feladat" placeholder="pl. mosdó, folyosó" type="text" value="{{data.feladat}}">
+                {{#if validationErrors.feladat}}
+                    <span class="help-block">{{validationErrors.feladat.msg}}</span>
                 {{/if}}
             </div>
         </div>
@@ -30,7 +30,7 @@
             <label for="leiras" class="col-lg-2 control-label">Leírás</label>
             <div class="col-lg-10">
                 <textarea class="form-control" rows="3" id="leiras" name="leiras">{{data.leiras}}</textarea>
-                <span class="help-block">Add meg a konkrét problémát</span>
+                <span class="help-block">Add meg a konkrét feladatleírást</span>
                 {{#if validationErrors.leiras}}
                     <span class="help-block">{{validationErrors.leiras.msg}}</span>
                 {{/if}}

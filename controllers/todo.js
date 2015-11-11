@@ -1,15 +1,15 @@
 
-// controllers/error.js
+// controllers/todo.js
 var express = require('express');
 var router = express.Router();
 
-var decorateErrors = require('../viewmodels/error');
+var decorateTodos = require('../viewmodels/todo');
 
 // Hibalista oldal
 router.get('/list', function (req, res) {
     req.app.models.error.find().then(function (errors) {
         res.render('todo/list', {
-            errors: decorateErrors(errors),
+            errors: decorateTodos(errors),
             messages: req.flash('info')
         });
     });
@@ -17,35 +17,35 @@ router.get('/list', function (req, res) {
 
 // Hiba felvitele
 router.get('/new', function(req, res) {
-    var validationErrors = (req.flash('validationErrors') || [{}]).pop();
+    var validationTodos = (req.flash('validationTodos') || [{}]).pop();
     var data = (req.flash('data') || [{}]).pop();
     
     res.render('todo/new', {
-        validationErrors: validationErrors,
+        validationTodos: validationTodos,
         data: data,
     });
 })
 
-// Névjegy felvétele POST
+// Feladat felvétele POST
 router.post('/new', function(req, res) {
    // adatok ellenőrzése
-    req.checkBody('helyszin', 'Feladat neve').notEmpty().withMessage('Kötelező megadni!');
+    req.checkBody('feladat', 'Feladat neve').notEmpty().withMessage('Kötelező megadni!');
     req.sanitizeBody('leiras').escape();
     req.checkBody('leiras', 'Feladat leírás').notEmpty().withMessage('Kötelező megadni!');
     
-    var validationErrors = req.validationErrors(true);
-    console.log(validationErrors);
+    var validationTodos = req.validationErrors(true);
+    console.log(validationTodos);
     
-    if (validationErrors) {
+    if (validationTodos) {
         // űrlap megjelenítése a hibákkal és a felküldött adatokkal
-        req.flash('validationErrors', validationErrors);
+        req.flash('validationErrors', validationTodos);
         req.flash('data', req.body);
         res.redirect('/todo/new');
     }
     else {
         req.app.models.error.create({
             status: 'new',
-            location: req.body.helyszin,
+            location: req.body.feladat,
             description: req.body.leiras
         })
         .then(function (error) {
