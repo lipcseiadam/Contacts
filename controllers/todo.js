@@ -7,7 +7,7 @@ var decorateTodos = require('../viewmodels/todo');
 
 // Hibalista oldal
 router.get('/list', function (req, res) {
-    req.app.models.error.find().then(function (errors) {
+    req.app.models.todo.find().then(function (errors) {
         res.render('todo/list', {
             errors: decorateTodos(errors),
             messages: req.flash('info')
@@ -43,7 +43,7 @@ router.post('/new', function(req, res) {
         res.redirect('/todo/new');
     }
     else {
-        req.app.models.error.create({
+        req.app.models.todo.create({
             status: 'new',
             location: req.body.feladat,
             description: req.body.leiras

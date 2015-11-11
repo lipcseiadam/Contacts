@@ -47,6 +47,44 @@
         "id": 5
       }
     ],
+    "todo": [
+      {
+        "status": "new",
+        "location": "asd",
+        "description": "asd",
+        "date": "2015-11-11T14:37:13.048Z",
+        "createdAt": "2015-11-11T14:37:13.051Z",
+        "updatedAt": "2015-11-11T14:37:13.051Z",
+        "id": 1
+      },
+      {
+        "status": "new",
+        "location": "asd",
+        "description": "asdasd",
+        "date": "2015-11-11T14:38:27.348Z",
+        "createdAt": "2015-11-11T14:38:27.350Z",
+        "updatedAt": "2015-11-11T14:38:27.350Z",
+        "id": 2
+      },
+      {
+        "status": "new",
+        "location": "qwe",
+        "description": "qwe",
+        "date": "2015-11-11T14:41:03.033Z",
+        "createdAt": "2015-11-11T14:41:03.036Z",
+        "updatedAt": "2015-11-11T14:41:03.036Z",
+        "id": 3
+      },
+      {
+        "status": "new",
+        "location": "asd",
+        "description": "asdasd",
+        "date": "2015-11-11T14:54:49.839Z",
+        "createdAt": "2015-11-11T14:54:49.842Z",
+        "updatedAt": "2015-11-11T14:54:49.842Z",
+        "id": 4
+      }
+    ],
     "user": [
       {
         "surname": "asd",
@@ -74,6 +112,43 @@
           "success",
           "rejected",
           "pending"
+        ]
+      },
+      "location": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "todo": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "success",
+          "rejected"
         ]
       },
       "location": {
@@ -146,6 +221,9 @@
     },
     "user": {
       "id": 1
+    },
+    "todo": {
+      "id": 4
     }
   }
 }

@@ -34,7 +34,7 @@ module.exports = {
         },
         
         errors: {
-            collection: 'error',
+            collection: 'todo',
             via: 'user'
         },
         

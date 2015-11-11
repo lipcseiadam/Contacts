@@ -138,7 +138,6 @@ app.use(setLocalsForLayout());
 
 //endpoints
 app.use('/', indexController);
-//app.use('/errors', todoController);
 app.use('/todo', ensureAuthenticated, todoController);
 app.use('/login', loginController);
 
@@ -152,7 +151,7 @@ app.get('/logout', function(req, res){
 
 // ORM példány
 var orm = new Waterline();
-orm.loadCollection(Waterline.Collection.extend(require('./models/error')));
+orm.loadCollection(Waterline.Collection.extend(require('./models/todo')));
 orm.loadCollection(Waterline.Collection.extend(require('./models/user')));
 
 // ORM indítása
