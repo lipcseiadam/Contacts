@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
 })
 
 router.post('/', passport.authenticate('local', {
-    successRedirect: '/contacts/list',
+    successRedirect: '/todo/list',
     failureRedirect: '/login',
     failureFlash: true,
     badRequestMessage: 'Hiányzó adatok'

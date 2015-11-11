@@ -38,8 +38,8 @@ $(function () {
                         '<tr>' +
                             '<th>Időpont</th>' +
                             '<th>Státusz</th>' +
-                            '<th>Név</th>' +
-                            '<th>Telefonszám</th>' +
+                            '<th>Feladat neve</th>' +
+                            '<th>Feladat leírása</th>' +
                             '<th></th>' +
                         '</tr>'    +
                     '</thead>' +

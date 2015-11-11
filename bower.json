@@ -1,10 +1,10 @@
 {
-  "name": "névjegykezelő",
+  "name": "családi todo",
   "version": "0.0.0",
   "authors": [
     "Lipcsei Ádám"
   ],
-  "description": "Névjegykezelő alkalmazás",
+  "description": "Családi TODO alkalmazás",
   "license": "",
   "ignore": [
     "**/.*",

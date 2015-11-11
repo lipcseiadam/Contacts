@@ -10,7 +10,7 @@ var Waterline = require('waterline');
 var waterlineConfig = require('./config/waterline');
 
 var indexController = require('./controllers/index');
-var contactsController = require('./controllers/contact');
+var todoController = require('./controllers/todo');
 var loginController = require('./controllers/login');
 
 
@@ -138,8 +138,8 @@ app.use(setLocalsForLayout());
 
 //endpoints
 app.use('/', indexController);
-//app.use('/errors', contactsController);
-app.use('/contacts', ensureAuthenticated, contactsController);
+//app.use('/errors', todoController);
+app.use('/todo', ensureAuthenticated, todoController);
 app.use('/login', loginController);
 
 app.get('/operator', ensureAuthenticated, andRestrictTo('operator'), function(req, res) {
