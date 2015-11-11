@@ -6,7 +6,7 @@ $(function () {
     console.log($errorTable);
     
     var statusClasses = {
-        'new': 'danger',
+        'Új': 'danger',
         'assigned': 'info',
         'ready': 'success',
         'rejected': 'default',
@@ -38,8 +38,8 @@ $(function () {
                         '<tr>' +
                             '<th>Időpont</th>' +
                             '<th>Státusz</th>' +
-                            '<th>Helyszín</th>' +
-                            '<th>Leírás</th>' +
+                            '<th>Név</th>' +
+                            '<th>Telefonszám</th>' +
                             '<th></th>' +
                         '</tr>'    +
                     '</thead>' +

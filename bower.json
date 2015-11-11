@@ -1,11 +1,11 @@
 {
-  "name": "hibabejelento",
+  "name": "névjegykezelő",
   "version": "0.0.0",
   "authors": [
-    "eltezalan <kereszti.zalan@gmail.com>"
+    "Lipcsei Ádám"
   ],
-  "description": "Hibabejelento alkalmazas",
-  "license": "MIT",
+  "description": "Névjegykezelő alkalmazás",
+  "license": "",
   "ignore": [
     "**/.*",
     "node_modules",

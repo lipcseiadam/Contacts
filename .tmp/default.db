@@ -9,6 +9,15 @@
         "createdAt": "2015-11-07T12:56:48.332Z",
         "updatedAt": "2015-11-07T12:56:48.332Z",
         "id": 1
+      },
+      {
+        "status": "new",
+        "location": "asd",
+        "description": "asd",
+        "date": "2015-11-11T12:23:31.658Z",
+        "createdAt": "2015-11-11T12:23:31.663Z",
+        "updatedAt": "2015-11-11T12:23:31.663Z",
+        "id": 2
       }
     ],
     "user": [
@@ -106,7 +115,7 @@
   },
   "counters": {
     "error": {
-      "id": 1
+      "id": 2
     },
     "user": {
       "id": 1
